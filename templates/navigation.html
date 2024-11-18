@@ -1,0 +1,39 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'img/favicon.ico' %}" alt="Logo" class="img-fluid" style="max-width: 40px;">
+        </a>
+
+        <!-- Botón de colapso para dispositivos móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Elementos de la barra -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Nombre del usuario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Plantilla</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Importar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Exportar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Formato para importar registros</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

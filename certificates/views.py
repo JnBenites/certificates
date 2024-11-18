@@ -4,8 +4,19 @@ from django.db.models import Q
 from record.models import Certificate
 from users.models import CustomUser
 
+def login_view(request):
+    customuser = CustomUser.objects.all()
+    certificate = Certificate.objects.all()
+#    cargos = Cargo.objects.count()
+#    encargados = Encargado.objects.count()
+#    equipos = Equipo.objects.count()
+#    mantenimientos = Mantenimiento.objects.count()
+    return render(request, 'certificates/login.html', {'customuser': customuser, 'certificate': certificate,})
+
+
 def search_certificates(request):
     query = request.GET.get('q', '')
+
     
     if request.headers.get('x-requested-with') == 'XMLHttpRequest':
         if len(query) > 2:
@@ -39,4 +50,4 @@ def panel_view(request):
 #    encargados = Encargado.objects.count()
 #    equipos = Equipo.objects.count()
 #    mantenimientos = Mantenimiento.objects.count()
-    return render(request, 'certificates/login.html', {'customuser': customuser, 'certificate': certificate,})
+    return render(request, 'certificates/c-admin.html', {'customuser': customuser, 'certificate': certificate,})

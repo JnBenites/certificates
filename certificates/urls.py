@@ -26,5 +26,6 @@ urlpatterns = [
     path('', views.search_certificates, name='search_certificates'),
  #   path('search_certificates', views.panel_view, name='panel'),   
     path('panel/',  views.panel_view, name='panel'),
+    path('login/',  views.login_view, name='panel'),
 
 ]
